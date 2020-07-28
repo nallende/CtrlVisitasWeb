@@ -7,39 +7,7 @@
 <div class="jumbotron">
         <h2>Control de Acceso</h2>
 
-<div class="container">
 
-       <div class="row ">
-      
-                  <div class="col-auto">
-
-                        <asp:TextBox ID="TextEmpresa" runat="server" Width="350px"></asp:TextBox>Empresa<br>    
-        
-                        <asp:TextBox ID="TextContacto" runat="server" Width="350px"></asp:TextBox>Contacto<br>
-
-                        <asp:TextBox ID="TextFono" runat="server" Width="350px"></asp:TextBox>Fono<br>
-        </div>
-
-                                                <div class="row">
-     
-                                                        <div class="col-md-6">
-                                                            <div > 
-                                                                <asp:Button id="btnCrearEmpresa" CssClass="btn btn-primary-spacing btn-default"  runat="server" Text="Enviar Info Empresa" />
-                                
-                               
-                                                                <asp:Button  id="btnModificarEmpresa" CssClass="btn btn-primary-spacing btn-default"  runat="server" Text="Modificar Empresa" />
-                              
-                               
-                                                                <asp:Button  id="btnEliminarEmpresa" CssClass="btn btn-primary -spacing btn-danger "  runat="server" Text="Eliminar Info Empresa" />
-
-                                                                <asp:Button  id="btnListarEmpresa" CssClass="btn btn-primary -spacing btn-success "  runat="server" Text="Listar Info  Empresa" />
-                                                            </div> 
-                                                        </div>
-                        </div>
-
-           </div>
-
-      </div>  
  
     <div class="container">
 

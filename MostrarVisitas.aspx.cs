@@ -14,8 +14,8 @@ namespace CtrlVisitasWeb
         private IVisitasDAL visitaDal = new VisitasDalDB();
 
 
-        private void CargarGrillaVisitas(List<Visita> visitas)
-            this
+       // private void CargarGrillaVisitas(List<Visita> visitas);
+         //   this
 
 
 
