@@ -14,6 +14,20 @@ namespace CtrlVisitasWeb
         private IVisitasDAL visitasDAL = new VisitasDalDB();
 
 
+        private void cargarGrillaVisitas()
+        {
+            List<Visita> visitas;
+            if (this.filtroEstado.Checked)
+            {
+                visitas = this.visitasDAL.ObtenerVisitas();
+            }
+            else
+            {
+                visitas = this.visitasDAL.ObtenerVisitas(this.estadoDDL.SelectedValue);
+            }
+            this.cargarGrillaVisitas(visitas);
+        }
+
         private void cargarGrillaVisitas(List<Visita> visitas)
         {
             this.grillaVisitas.DataSource = visitas;
@@ -26,8 +40,20 @@ namespace CtrlVisitasWeb
         {
             if (!IsPostBack)
             {
-                this.cargarGrillaVisitas(this.visitasDAL.ObtenerVisitas());
+                this.cargarGrillaVisitas();
             }
+        }
+
+        protected void estadoDDL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.cargarGrillaVisitas();
+
+        }
+
+        protected void filtroEstado_CheckedChanged(object sender, EventArgs e)
+        {
+            this.estadoDDL.Enabled = !this.filtroEstado.Checked;
+            this.cargarGrillaVisitas();
         }
     }
 }

@@ -11,52 +11,52 @@ namespace CtrlVisitasWeb
 {
 
 
-    public partial class MostrarVisitas
+    public partial class AdminUsuario
     {
 
         /// <summary>
-        /// Control ScriptManager1.
+        /// Control TextNombreUser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.TextBox TextNombreUser;
 
         /// <summary>
-        /// Control UpdatePanel1.
+        /// Control TextCorreoUser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.TextBox TextCorreoUser;
 
         /// <summary>
-        /// Control estadoDDL.
+        /// Control TextClave.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList estadoDDL;
+        protected global::System.Web.UI.WebControls.TextBox TextClave;
 
         /// <summary>
-        /// Control filtroEstado.
+        /// Control btnCrearUsuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox filtroEstado;
+        protected global::System.Web.UI.WebControls.Button btnCrearUsuarios;
 
         /// <summary>
-        /// Control grillaVisitas.
+        /// Control btnListarUsuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grillaVisitas;
+        protected global::System.Web.UI.WebControls.Button btnListarUsuarios;
     }
 }

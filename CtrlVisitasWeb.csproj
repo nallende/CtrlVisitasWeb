@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminUsuario.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -119,6 +120,13 @@
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUsuario.aspx.cs">
+      <DependentUpon>AdminUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUsuario.aspx.designer.cs">
+      <DependentUpon>AdminUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Defualt.aspx.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,6 +141,8 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MostrarUsuario.cs" />
+    <Compile Include="MostrarVehiculo.cs" />
     <Compile Include="MostrarVisitas.aspx.cs">
       <DependentUpon>MostrarVisitas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
