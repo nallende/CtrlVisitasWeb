@@ -42,6 +42,24 @@ namespace CtrlVisitasWeb
         protected global::System.Web.UI.WebControls.TextBox TextBoxApellido;
 
         /// <summary>
+        /// Control TextBoxEmpresa.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxEmpresa;
+
+        /// <summary>
+        /// Control TextBoxFono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxFono;
+
+        /// <summary>
         /// Control EstadoRBL.
         /// </summary>
         /// <remarks>
@@ -96,24 +114,6 @@ namespace CtrlVisitasWeb
         protected global::System.Web.UI.WebControls.Button btnCrearVisita;
 
         /// <summary>
-        /// Control btnModificarVisita.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnModificarVisita;
-
-        /// <summary>
-        /// Control btnEliminarVisita.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminarVisita;
-
-        /// <summary>
         /// Control btnListarVisita.
         /// </summary>
         /// <remarks>
@@ -157,24 +157,6 @@ namespace CtrlVisitasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCrearVehiculos;
-
-        /// <summary>
-        /// Control btnactualizarVehiculos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnactualizarVehiculos;
-
-        /// <summary>
-        /// Control btneliminarVehiculos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btneliminarVehiculos;
 
         /// <summary>
         /// Control btnListarVehiculos.
