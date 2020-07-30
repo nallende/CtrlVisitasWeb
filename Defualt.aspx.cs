@@ -33,7 +33,7 @@ namespace CtrlVisitasWeb
 
         protected void BtnCrearVisita_Click(object sender, EventArgs e)
         {
-           // if (!Page.IsValid)
+            if (!Page.IsValid)
             {
 
                 Visita visita = new Visita();

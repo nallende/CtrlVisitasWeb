@@ -97,6 +97,7 @@
     <Content Include="img\dave.gif" />
     <Content Include="img\progress-view.gif" />
     <Content Include="Login.aspx" />
+    <Content Include="ModificarVisita.aspx" />
     <Content Include="MostrarVehiculo.aspx" />
     <Content Include="MostrarVisitas.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -156,6 +157,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarVisita.aspx.cs">
+      <DependentUpon>ModificarVisita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarVisita.aspx.designer.cs">
+      <DependentUpon>ModificarVisita.aspx</DependentUpon>
     </Compile>
     <Compile Include="MostrarVehiculo.aspx.cs">
       <DependentUpon>MostrarVehiculo.aspx</DependentUpon>
