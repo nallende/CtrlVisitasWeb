@@ -55,5 +55,15 @@ namespace CtrlVisitasWeb
             this.estadoDDL.Enabled = !this.filtroEstado.Checked;
             this.cargarGrillaVisitas();
         }
+
+        public void grillaVisitas_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Eliminar")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+                this.visitasDAL.EliminarVisita(id);
+                this.cargarGrillaVisitas();
+            }
+        }
     }
 }

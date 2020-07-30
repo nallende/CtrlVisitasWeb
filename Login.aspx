@@ -10,19 +10,17 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Login ID="LoginForm" runat="server" TextboxStyle-CssClass ="form-Control" 
+   <div class="-center jumbotron">
+       <div class=" -center -row mt-5">
+            <asp:Login ID="LoginForm"  runat="server" TextboxStyle-CssClass ="form-Control" 
                 onAuthenticate="LoginForm_Authenticate"
                 Failure-TextStyle ="text-danger"
                 FailureText=" Datos No Validos"
                 Login-Buttonstyle="btn-btn-primary">
 
-               
-
-
             </asp:Login>
-
-
+           </div>
+       
         </div>
     </form>
 </body>

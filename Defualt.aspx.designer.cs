@@ -33,6 +33,15 @@ namespace CtrlVisitasWeb
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
+        /// Control rutCustomValidator.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator rutCustomValidator;
+
+        /// <summary>
         /// Control TextBoxNombre.
         /// </summary>
         /// <remarks>
@@ -157,59 +166,5 @@ namespace CtrlVisitasWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCrearVisita;
-
-        /// <summary>
-        /// Control btnListarVisita.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnListarVisita;
-
-        /// <summary>
-        /// Control TextPatente.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextPatente;
-
-        /// <summary>
-        /// Control TextTipo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextTipo;
-
-        /// <summary>
-        /// Control TextColor.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextColor;
-
-        /// <summary>
-        /// Control btnCrearVehiculos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearVehiculos;
-
-        /// <summary>
-        /// Control btnListarVehiculos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnListarVehiculos;
     }
 }

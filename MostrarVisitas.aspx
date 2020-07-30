@@ -4,8 +4,11 @@
 
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+       
+       
 
-        <ContentTemplate>
+
+            <ContentTemplate>
 
 
 
@@ -30,7 +33,8 @@
                             CssClass="table -center table-hover table-bordered"
                             AutoGenerateColumns="false"
                             ShowHeaderWhenEmpty="true"
-                            EmptyDataText="No Registros"
+                            EmptyDataText="No hay Registros"
+                            OnRowCommand="grillaVisitas_RowCommand"
                             runat="server">
 
                             <Columns>
@@ -43,12 +47,26 @@
                                 <asp:BoundField HeaderText="Estado" DataField="Estado" />
                                 <asp:BoundField HeaderText="Ingreso" DataField="Ingreso" />
                                 <asp:BoundField HeaderText="Salida" DataField="Salida" />
+                                <asp:TemplateField HeaderText="Cambios">
+                                    <ItemTemplate>
 
+                                        <asp:Button CssClass="btn btn-danger" runat="server"
+                                             CommandName="Eliminar" Text="Eliminar"
+                                             CommandArgument='<%Eval("id") %>' />
+
+                                    </ItemTemplate>
+
+
+                                </asp:TemplateField>
                             </Columns>
 
                         </asp:GridView>
-
-                    </div>
+                         <asp:UpdateProgress runat="server">
+                              <ProgressTemplate>
+                                <asp:Image runat="server" ImageUrl="~/img/progress.gif"></asp:Image>
+                                 </ProgressTemplate>
+                             </asp:UpdateProgress>
+                       </div>
 
                 </div>
 

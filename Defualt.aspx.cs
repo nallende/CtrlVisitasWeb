@@ -11,13 +11,13 @@ namespace CtrlVisitasWeb
 {
     public partial class Defualt : System.Web.UI.Page
     {
-        private IVehiculosDAL vehiculosDAL = new VehiculosDalDB();
+     
         private IVisitasDAL visitasDAL = new VisitasDalDB();
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //TODO :
+           
 
         }
 
@@ -31,78 +31,59 @@ namespace CtrlVisitasWeb
             fechaHoraEgreso.Text = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
         }
 
-        protected void btnCrearVisita_Click(object sender, EventArgs e)
+        protected void BtnCrearVisita_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid) {
-
-            Visita visita = new Visita();
-            visita.Rut = this.TextBoxRut.Text.Trim();
-            visita.Nombre = this.TextBoxNombre.Text.Trim();
-            visita.Apellido = this.TextBoxApellido.Text.Trim();
-            visita.Empresa = this.TextBoxEmpresa.Text.Trim();
-            visita.Fono = Convert.ToInt32(this.TextBoxFono.Text.Trim());
-            visita.Estado = this.EstadoRBL.SelectedValue;
-            visita.Ingreso = Convert.ToDateTime(this.fechaHoraIngreso.Text.Trim());
-            visita.Salida = Convert.ToDateTime(this.fechaHoraEgreso.Text.Trim());
-
-            this.visitasDAL.AgregrarVisita(visita);
-            Response.Redirect("MostrarVisitas.aspx");
-        }
-
-       }
-
-        protected void btnCrearVehiculos_Click(object sender, EventArgs e)
-        {
-            Vehiculo vehiculo = new Vehiculo();
-            vehiculo.Patente = this.TextPatente.Text.Trim();
-            vehiculo.Tipo = this.TextTipo.Text.Trim();
-            vehiculo.Color = this.TextColor.Text.Trim();
-            this.vehiculosDAL.ObtenerVehiculos();
-            Response.Redirect("MostrarVisita.aspx");
-
-        }
-
-        protected void TextBoxRut_TextChanged(object sender, EventArgs e)
-        {
-
-            string rut = TextBoxRut.Text;
-
-           bool valid =  validarRut(rut);
-
-        }
-            bool validarRut(string rut)
+           // if (!Page.IsValid)
             {
-               
+
+                Visita visita = new Visita();
+                visita.Rut = this.TextBoxRut.Text.Trim();
+                visita.Nombre = this.TextBoxNombre.Text.Trim();
+                visita.Apellido = this.TextBoxApellido.Text.Trim();
+                visita.Empresa = this.TextBoxEmpresa.Text.Trim();
+                visita.Fono = Convert.ToInt32(this.TextBoxFono.Text.Trim());
+                visita.Estado = this.EstadoRBL.SelectedValue;
+                visita.Ingreso = Convert.ToDateTime(this.fechaHoraIngreso.Text.Trim());
+                visita.Salida = Convert.ToDateTime(this.fechaHoraEgreso.Text.Trim());
+
+                this.visitasDAL.AgregrarVisita(visita);
+                Response.Redirect("MostrarVisitas.aspx");
+            }
+
+        }
+
+    
+
+        protected void RutCustomValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string rut = TextBoxRut.Text.Trim();
+            bool validacion = true;
+
+            if (rut.Length != 9)
+            {
+                validacion = false;
+                this.rutCustomValidator.ErrorMessage = "El largo del RUT no corresponde";
+            }else if( rut.Split('-').Length !=2 || rut.Split('-')[1].Length != 1)
+            {
+                validacion = false;
+                this.rutCustomValidator.ErrorMessage = "Debe ingresae digito verificador";
+            }
+            else
+            {
+                Visita visitaExistente = this.visitasDAL.Obtener(rut);
+                if(visitaExistente != null)
                 {
-
-
-                    bool validacion = false;
-                    try
-                    {
-                        rut = rut.ToUpper();
-                        rut = rut.Replace(".", "");
-                        rut = rut.Replace("-", "");
-                        int rutAux = int.Parse(rut.Substring(0, rut.Length - 1));
-
-                        char dv = char.Parse(rut.Substring(rut.Length - 1, 1));
-
-                        int m = 0, s = 1;
-                        for (; rutAux != 0; rutAux /= 10)
-                        {
-                            s = (s + rutAux % 10 * (9 - m++ % 6)) % 11;
-                        }
-                        if (dv == (char)(s != 0 ? s + 47 : 75))
-                        {
-                            validacion = true;
-                        }
-                    }
-                    catch (Exception )
-                    {
-                    
-                    }
-                    return validacion;
+                    validacion = false;
+                    this.rutCustomValidator.ErrorMessage = "Rut ya Existe";
                 }
+            }
+            args.IsValid = validacion;
+        }
 
-            } 
+        protected void btnListarVisita_Click(object sender, EventArgs e)
+        {
+            //Response.Redirect("MostrarVisita.aspx");
+            Server.Transfer("MostrarVisita.aspx");
         }
     }
+}
