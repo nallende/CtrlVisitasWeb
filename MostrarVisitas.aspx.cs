@@ -65,5 +65,7 @@ namespace CtrlVisitasWeb
                 this.cargarGrillaVisitas();
             }
         }
+
+       
     }
 }

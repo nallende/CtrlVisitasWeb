@@ -52,8 +52,9 @@
 
                                         <asp:Button CssClass="btn btn-danger" runat="server"
                                              CommandName="Eliminar" Text="Eliminar"
-                                             CommandArgument='<%Eval("id") %>' />
+                                             CommandArgument= '<%# Eval("id")%>' />
 
+                                      
                                     </ItemTemplate>
 
 
